@@ -13,7 +13,7 @@ int main(){
 	isPositive(-588);
 
 	float res = salary(180,28,30,200);
-	printf("res = %f \n",res);
+	printf("res = %.2f \n",res);
 
 	return 0;
 }
