@@ -1,23 +1,26 @@
 #include <stdio.h>
 float salary(float hours,float wage,float base,float factor,int type,float bns);
+
+
 int main(){
-
-float salary1=salary(176,28,5000,22,1,500);
-printf("salary1 = %f \n",salary1);
-
-float salary2=salary(176,28,5000,22,5,200);
-printf("salary2 = %f \n",salary2);
-
+	float res=salary(176,28,5000,22,1,30);
+	printf("salary= %.2f \n",res);
 	return 0;
 }
+
+
 float salary(float hours,float wage,float base,float factor,int type,float bns){
+	float res;
 	if(type!=1&&type!=2)
 		return 0;
-
 	if(type==1){
-	return (hours*wage)+bns;
+		 res=hours*wage;
 	}else if(type==2){
-	return (base*factor)+bns;
+		res=base*factor;
 	}
-}
 
+
+	float bonus = (res*bns)/100;
+	return res+bonus;
+
+}

@@ -1,7 +1,7 @@
 #include <stdio.h>
 void fan(int mode);
 int main(){
-fan(3);
+fan(4);
 	return 0;
 }
 void fan(int mode){
@@ -10,14 +10,14 @@ void fan(int mode){
 	return;
 	}
 	if(mode == 1){
-		printf("Speed 1 \n");
+		printf("mode=speed %d \n",mode);
 	}
 	else if (mode == 2){
-		printf("Speed 2 \n");
+		printf("mode=speed %d \n",mode);
 	}
 
 	else if (mode == 3){
-			printf("Speed 3 \n");
+			printf("mode=speed %d \n",mode);
 		}
 
 }
