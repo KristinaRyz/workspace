@@ -6,7 +6,6 @@
  */
 #include <stdio.h>
 int digitsCount(int number);
-int digitsCountOptimized(int number);
 int main(){
 
 	int	number = digitsCount(0);
