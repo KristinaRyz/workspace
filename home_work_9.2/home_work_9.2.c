@@ -6,9 +6,11 @@
  */
 #include <stdio.h>
 int digitsCount(int number);
+int digitsCountOptimized(int number);
 int main(){
-	int number = digitsCount(255454);
-	printf("number = %d\n", number);
+
+	int	number = digitsCount(0);
+		printf("number = %d\n", number);
 	return 0;
 }
 int digitsCount(int number){
@@ -16,10 +18,9 @@ int digitsCount(int number){
 	do {number = number / 10;
 	counter ++;
 	}while (number!=0);
-		return counter;
+	return counter;
 
-	}
-
+}
 
 
 

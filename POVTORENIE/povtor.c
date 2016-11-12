@@ -1,19 +1,18 @@
 #include<stdio.h>
-void print_stars(int stars, int inRow);
+int table(int n);
 int main(){
-	print_stars(16,4);
+
+	int sum = table(10);
+	printf("sum = %d\n",sum);
 	return 0;
 }
-void print_stars(int stars, int inRow){
-	int counter = 0;
-	for(;stars>0;){
-		printf("*");
-		counter++;
-		if(counter == inRow){//inRow=kol-vo zvezd v stroke
-			printf("\n");
-			counter = 0;//bez etogo dalwe budet pechatat zvezdi v stroku
-		}
-		stars--;
+int table (int n){
+	int res = 0;
+	for(int x = 1; x<=n; x++){
+		res = res + x;
 	}
-	printf("\n");//nov func s novoi stroki
-}
+		return res;
+	}
+
+
+

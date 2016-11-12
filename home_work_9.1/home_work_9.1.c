@@ -38,7 +38,7 @@ int numberSum(int number){
 	return sum;
 }
 //////////////////////////////////////////////////////////////////////////////
-int XpowerY(int x, int y){//vvozvedenie v stepen // tolko dlya pologitelnih y
+int XpowerY(int x, int y){
 	int res = 1;
 	for(;y > 0;y--){
 		res = res * x;
@@ -60,14 +60,14 @@ void print_stars(int stars, int inRow){
 
 	for(int counter = 0; stars > 0; counter++){
 
-		if(counter == inRow){//inRow=kol-vo zvezd v stroke
+		if(counter == inRow){
 			printf("\n");
-			counter = 0;//bez etogo dalwe budet pechatat zvezdi v stroku
+			counter = 0;
 		}
 		printf("*");
 		stars--;
 	}
 
-	printf("\n");//nov func s novoi stroki
+	printf("\n");
 }
 //////////////////////////////////////////////////////////////////////////////
