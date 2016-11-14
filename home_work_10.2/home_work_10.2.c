@@ -7,11 +7,11 @@ int main(){
 				printf("* ");
 			}
 			else if (j == 5){
-//				else if (j == 1){
+				//				else if (j == 1){
 				printf("* ");
 			}
 			else if (j == 4 && i!=1 && i!=5){
-//				else if (j == 2 && i!=1 && i!=5){
+				//				else if (j == 2 && i!=1 && i!=5){
 				printf("* ");
 			}else
 				printf("  ");
