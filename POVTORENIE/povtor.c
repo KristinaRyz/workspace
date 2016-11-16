@@ -1,14 +1,21 @@
-/*
- * class_work_10.1_13.11.16.c
- *
- *  Created on: 13/11/2016
- *      Author: Gran1
- */
 #include<stdio.h>
+	void printTreangle(int num);
 int main(){
-	int ind, b;
-	for(ind = 0, b = 100; ind < b; ind++){
-		printf("* ");
-	}
 	return 0;
-}
+	void printTreangle(int num){
+		int i, j;
+		for(j = 1; j<=num; j++){
+			for(i =1; i<=j; i++){//inner loop
+
+
+
+				if(i==0 || i == 6||j ==6 || i==j || j==0 || j == i+1 ||j == i+2||j == i+3||j == i+4){
+					//			if(i==0 || i == 6||j ==6 || i==j || j==0 || j == i-1 ||j == i-2||j == i-3||j == i-4){
+					printf("* ");
+				}else
+					printf("  ");
+			}
+			printf("\n");
+		}
+	}
+
