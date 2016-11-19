@@ -8,7 +8,7 @@
 #include<stdio.h>
 int main(){
 	int ind, b;
-	for(ind = 0, b = 100; ind < b; ind++){
+	for(ind = 0, b = 100; ind + b; ind++){
 		printf("* ");
 	}
 	return 0;
