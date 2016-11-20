@@ -5,6 +5,7 @@
  *      Author: Кристина Рыжикова
  */
 #include <stdio.h>
+
 void printEvenReverse(int number);
 int printOddSum (int number);
 int hasDigits(int number, int digit);

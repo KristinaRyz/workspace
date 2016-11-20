@@ -4,13 +4,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../proba.c 
+../home_work_11.2.c 
 
 OBJS += \
-./proba.o 
+./home_work_11.2.o 
 
 C_DEPS += \
-./proba.d 
+./home_work_11.2.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
