@@ -1,44 +1,37 @@
-#include <stdio.h>
-int  hasSubnumber(int number, int subNumber);
+#include<stdio.h>
+void printArray(int ar[],int size);
+void printArrayReverse (int ar[], int size);
+int arraySum(int ar[], int size);
 
 int main(){
-	int res = hasSubnumber(12345678,1);
-			if(res==0)
-				printf("Not found\n");
-			else
-				printf("Found\n");
-    return 0;
-}
-//          12345678                57
-int  hasSubnumber(int number, int subNumber){
-	int dCount = digitsCount(subNumber);
-	int pow = power10(dCount);
-	int res;
-	do {
-		 res=number%pow;
-			if(res==subNumber)
-				return 1;
-			number = number/10;
-		}
-		while(number>0);
-		return 0;
-}
-int digitsCount(int number){
-	int count = 0;
+	int ar[9]={3,1,7,4,5};
+	printArray(ar, 9);
+	printArrayReverse (ar,9);
 
-	do {
-		number = number/10; //1.
-		count++;
-	}
-	while(number!=0);
-	return count;
+	int arSum = arraySum(ar,9);
+	printf("\n arSum = %d \n", arSum);
+	return 0;
 }
-int power10(int y){
-	int res = 1;
-	while(y > 0){
-		res = res * 10;
-		y--;
+void printArray(int ar[],int size){
+	int index;
+	for(index = 0; index < size; index++){
+		printf("%d   ",ar[index]);
 	}
-	return res;
+printf("\n");
 }
 
+void printArrayReverse (int ar[], int size){
+	int i;
+	for(i = size-1; i>=0; i--){
+		printf("%d   ", ar[i]);
+	}
+	printf(" \n ");
+}
+
+int arraySum(int ar[], int size){ // sum vseh yacheek massiva
+	int i, sum = 0;
+	for(i=0;i < size-1; i++){ // ili napisat size vmesto size-1
+		sum = sum +ar[i];
+	}
+	return sum;
+}
