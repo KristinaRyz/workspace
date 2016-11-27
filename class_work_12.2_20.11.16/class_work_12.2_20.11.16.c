@@ -33,7 +33,9 @@ int main(){//  0 1 2 3 4
 
 		printArray(ar1,7);
 
-
+int ar3[4]={4,1,6,2};
+int res=arraySum(ar3,4);
+printf("res= %d\n",res);
 	return 0;
 }
 

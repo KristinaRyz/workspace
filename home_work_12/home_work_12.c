@@ -2,12 +2,15 @@
  * home_work_12.c
  *
  *  Created on: 21.11.2016
- *      Author: Êğèñòèíà Ğûæèêîâà
+ *      Author: ĞšÑ€Ğ¸ÑÑ‚Ğ¸Ğ½Ğ° Ğ Ñ‹Ğ¶Ğ¸ĞºĞ¾Ğ²Ğ°
  */
 #include<stdio.h>
 void printArrayEvens(int ar[],int size);
 void printArrayReverseOdds(int ar[],int size);
 int arrayEvenIndexSum(int ar[],int size);
+void arrayPrint (int number);
+int digitsCount(int number);
+int printNumber(int number);
 
 int main(){
 	//          0 1 2 3 4 5 6
@@ -18,7 +21,9 @@ int main(){
 
 	int sumEven = arrayEvenIndexSum(ar,7);
 	printf("sumEven = %d \n", sumEven);
+	printf("\n \n");
 
+	arrayPrint(123456);
 
 	return 0;
 }
@@ -26,7 +31,7 @@ int main(){
 void printArrayEvens(int ar[],int size){
 	int i;
 	for(i=0; i<size; i++){
-		if(ar[i]%2==0)
+		if(ar[i]%2==0)//zugi - 4etnie
 			printf("%d  ",ar[i]);
 	}
 	printf("\n\n");
@@ -34,18 +39,47 @@ void printArrayEvens(int ar[],int size){
 
 void printArrayReverseOdds(int ar[],int size){
 	int i;
-	for(i=size-1; i>=0; i--){
-		if(ar[i]%2!=0)
+	for(i=size-1; i>=0; i--){//×××—×•×¨
+		if(ar[i]%2!=0)//  ne 4etnie ××™×–×•×’×™
 			printf("%d  ",ar[i]);
 	}
 	printf("\n\n");
 }
 
-int arrayEvenIndexSum(int ar[],int size){
+int arrayEvenIndexSum(int ar[],int size){//×¡×—×•×
 	int i,even=0;
 	for(i=0; i<size; i+=2){
 		even += ar[i];
 	}
-
 	return even;
 }
+
+
+void arrayPrint (int number){
+	int i = digitsCount(number);
+	int ar[i];
+	for(int j =i-1; j>=0; j--){
+		ar[j]=number%10;
+		number = number/10;
+		//		printf("ar[%d]= %d \n",j, ar[j]);
+	}
+	for(int b=0 ; b<i; b++){
+		printf("ar[%d]= %d \n",b,ar[b]);
+	}
+
+
+}
+
+int digitsCount(int number){
+	int count = 0;
+
+	do {
+		number = number/10; //1.
+		count++;
+	}
+	while(number!=0);
+	return count;
+}
+
+
+

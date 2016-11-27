@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){ //        0  1 2 3 4 5
-	int ar[6];//musor[4][][][9][][]
+	int ar[6];//musor[4][][][9][][0]
 	ar[3] = 9;
 	ar[0] =4;
 	printf("%d\n", ar[5]);
